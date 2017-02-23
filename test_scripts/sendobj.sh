@@ -10,8 +10,8 @@ show_help() {
    a API REST Django Rest Framework.
 
         -h              mostra essa ajuda e sai
-        -T              envia 10 objetos texto
-        -t n            Envia n objetos texto
+        -d              envia 10 objetos texto
+        -n n            Envia n objetos texto
 EOF
 }
 

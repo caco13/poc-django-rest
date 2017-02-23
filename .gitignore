@@ -1,0 +1,8 @@
+# IDE
+.idea/
+
+# Sqlite database
+db.sqlite3
+
+# Diretório media
+media/

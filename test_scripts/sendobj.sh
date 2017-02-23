@@ -37,7 +37,8 @@ send_li_objects() {
 
         # Requires user and password created in API
         # Change indc:indc@indc with <user>:<password> in your system
-        http -a indc:indc@indc http://127.0.0.1:8000/experiments/ title="$title" description="$description" nes_id=$nes_id
+        # Change 10.0.2.2:8000 with <ip>:<port> of your API server
+        http -a indc:indc@indc http://10.0.2.2:8000/experiments/ title="$title" description="$description" nes_id=$nes_id
     done
 }
 

@@ -21,8 +21,6 @@ while getopts "h?" opt; do
     esac
 done
 
-# Get all files in current directory and send them to REST API server
-# Safe because we tested for h option
 if [ $# -eq 0 ] ; then
 	show_help >&2
 	exit 1

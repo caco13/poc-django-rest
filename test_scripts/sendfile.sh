@@ -32,7 +32,7 @@ else
 			echo "Error: File $file does not exist."
 			continue
 		fi
-		http -a indc:indc@indc -f POST http://10.0.2.2:8000/uploads/ datafile@"$file"
+		http -a indc:indc@indc -f POST http://127.0.0.1:8000/uploads/ datafile@"$file" --timeout 120
 	done
 fi
 

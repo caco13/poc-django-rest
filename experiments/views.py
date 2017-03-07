@@ -2,6 +2,8 @@ from django.contrib.auth.models import User
 from rest_framework import generics
 from rest_framework import permissions
 from rest_framework import parsers
+from drf_chunked_upload.models import ChunkedUpload
+from drf_chunked_upload.serializers import ChunkedUploadSerializer
 from experiments.models import Experiment, FileUpload
 from experiments.serializers import ExperimentSerializer, UserSerializer, \
     FileUploadSerializer
@@ -17,6 +19,11 @@ class FileUploadList(generics.ListCreateAPIView):
     def perform_create(self, serializer):
         serializer.save(owner=self.request.user,
                         datafile=self.request.data.get('datafile'))
+
+
+class UploadChunksDetail(generics.RetrieveUpdateAPIView):
+    queryset = ChunkedUpload.objects.all()
+    serializer_class = ChunkedUploadSerializer
 
 
 class ExperimentList(generics.ListCreateAPIView):

@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django_extensions',
     'rest_framework',
     'experiments.apps.ExperimentsConfig',
+    'drf_chunked_upload',
 ]
 
 MIDDLEWARE = [
@@ -123,3 +124,9 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 MEDIA_ROOT = '/home/caco/Workspace/poc-django-rest/nep/media/'
+
+# Chunked upload files module environment variables
+# TODO: does not work. See
+# TODO: /home/caco/Workspace/poc-django-rest/lib/python3.6/site-packages
+# TODO: /drf_chunked_upload/settings.py
+DRF_CHUNKED_UPLOAD_ABSTRACT_MODEL = False
